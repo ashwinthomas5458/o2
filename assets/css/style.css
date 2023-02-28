@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+    width: 0px;
+}
+*{
+    scrollbar-width: none;
+}
+
+/* ---- Colors ----
+primary background: #FFFBFF;
+primary text: #000500;
+------------------- */
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #FFFBFF;
+    color: #000500;
+}
+body, button, input{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    color:#000500; 
+}
+a:hover{
+    color:#000500; 
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+h1,h2,h3,h4,h5,h6{font-weight: 600;}
+button{
+    font-size: clamp(14px, 1.2rem, 16px);
+    font-weight: 600;
+    width: max-content;
+    padding: 10px 20px;
+    background: #00000000;
+    border: none;
+    border-radius: 0;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+.o-nav-bar-wrap{
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.o-body{
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #FFFBFF , #EEEAE8);
+}
+h3.o-maintenance-title{
+    color: #362417;
+}
+p.o-maintenance-desc{
+    color: #565254;
+}
+.o-under-construction{
+    max-width: 600px;
+}
+.o-contact-btn{
+    font-size: clamp(14px, 1.2rem, 16px);
+    font-weight: 600;
+    width: max-content;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    background-color: #FF7F49;
+    border: 1px solid #FF7F49;
+    color: #FFFBFE;
+    border-radius: 8px;
+    padding: 18px 32px;
+}
+.o-contact-btn:hover{
+    background-color: #4A5899;
+    color: #FFFBFE;
+}
+.o-footer{
+    background-color: #FFFBFF;
+    color: #C1CFDA;
+}
