@@ -24,8 +24,8 @@ body{
     background-color: #FFFBFF;
     color: #000500;
 }
-body, button, input{
-    font-family: 'Poppins', sans-serif;
+body, a, button, input{
+    font-family: 'Lexend Deca', sans-serif;
 }
 a{
     text-decoration: none;
@@ -58,12 +58,20 @@ button{
     top: 0;
     left: 0;
     z-index: 10;
+    background: #F8FAFCCC;
+    backdrop-filter: blur(16px);
 }
 .o-body{
     min-height: 100vh;
-    background-image: linear-gradient(135deg, #FFFBFF , #EEEAE8);
+    background: #F8FAFC;
 }
-h3.o-maintenance-title{
+a.o-logo-text{
+    font-weight: 700;
+    font-size: clamp(24px, 1.2rem, 28px);
+    line-height: 150%;
+    color: #1E293B;
+}
+/* h3.o-maintenance-title{
     color: #362417;
 }
 p.o-maintenance-desc{
@@ -71,8 +79,8 @@ p.o-maintenance-desc{
 }
 .o-under-construction{
     max-width: 600px;
-}
-.o-contact-btn{
+} */
+.o-primary-btn{
     font-size: clamp(14px, 1.2rem, 16px);
     font-weight: 600;
     width: max-content;
@@ -84,11 +92,153 @@ p.o-maintenance-desc{
     border-radius: 8px;
     padding: 18px 32px;
 }
-.o-contact-btn:hover{
-    background-color: #4A5899;
-    color: #FFFBFE;
+.o-primary-btn:hover{
+    border: 1px solid #4A5899;
+    background-color: #FF7F4900;
+    color: #4A5899;
 }
-.o-footer{
-    background-color: #FFFBFF;
+.o-section-wrap{
+    padding: 80px 0;
+}
+.o-section-divider{
+    height: 1px;
+    background: linear-gradient(90deg, #F1F5F9 0%, #CBD5E1 50%, #F1F5F9 100%);
+}
+.o-hero-wrap{
+    min-height: 100vh;
+    overflow: hidden;
+}
+.o-hero-image{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+.o-hero-content{
+    z-index: 1;
+}
+.o-hero-bg{
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(80px);
+    -webkit-filter: blur(80px);
+}
+.o-section-padding-lg{
+    padding: 240px 0;
+}
+h1.o-title-text{
+    font-size: clamp(40px, 2.6rem, 48px);
+    line-height: 150%;
+    color: #1E293B;
+}
+h1.o-sec-title-text{
+    font-size: clamp(32px, 2rem, 36px);
+    line-height: 150%;
+    color: #1E293B;
+}
+h2.o-title-text{
+    font-size: clamp(24px, 1.8rem, 32px);
+    line-height: 150%;
+    color: #1E293B;
+}
+p.o-desc-text{
+    font-size: clamp(18px, 1.2rem, 20px);
+    line-height: 150%;
+    font-weight: 200;
+    color: #64748B;
+}
+.o-label{
+    font-size: clamp(14px, 1rem, 16px);
+    line-height: 150%;
+    font-weight: 700;
+    color: #64748B;
+}
+.o-input-wrap{
+    padding: 16px 24px;
+    border: 1px solid #1E293B;
+    background-color: #FFF0;
+    border-radius: 8px;
+    color: #1E293B;
+    outline: none;
+    font-size: clamp(18px, 1.2rem, 20px);
+    line-height: 150%;
+    font-weight: 200;
+}
+.o-contact-section{
+    background: #061012;
+}
+.o-contact-section .o-input-wrap{
+    border: 1px solid #C1CFDA;
     color: #C1CFDA;
 }
+.o-contact-section h2.o-title-text{
+    color: #C1CFDA;
+}
+.o-footer{
+    background: #000500;
+    color: #64748B60;
+}
+.o-footer h6{
+    color: #64748B60;
+}
+@media only screen and (max-width: 767px){
+    a.o-logo-text{
+        font-size: clamp(20px, 1rem, 24px);
+    }
+    h1.o-title-text{
+        font-size: clamp(32px, 2.2rem, 36px);
+    }
+    h1.o-sec-title-text{
+        font-size: clamp(24x, 1.8rem, 28px);
+    }
+    h2.o-title-text{
+        font-size: clamp(20px, 1.6rem, 24px);
+    }
+    p.o-desc-text{
+        font-size: clamp(14px, 1rem, 16px);
+    }
+    .o-input-wrap{
+        font-size: clamp(14px, 1rem, 16px);
+    }
+    .o-hero-image{
+        width: 80%;
+        max-width: 600px;
+        height: auto;
+        object-fit: contain;
+    }
+    .o-primary-btn{
+        font-size: clamp(14px, 1rem, 16px);
+        padding: 16px 24px;
+    }
+    .o-section-padding-lg{
+        padding: 160px 0;
+    }
+    .o-hero-wrap{
+        padding: 140px 0;
+    }
+}
+
+.o-disable-btn{
+    cursor: not-allowed;
+}
+.o-disable-btn{
+    opacity: 0.6;
+    pointer-events: none;
+}
+.o-error-message{
+    bottom: 0;
+    left: 0;
+    color: #b92f2f;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 12px;
+    font-weight: 400;
+    transition: opacity 0.5s ease-out;
+}
+.o-input-invalid .o-input-wrap{
+    color: #b92f2f;
+    border: 1px solid #b92f2f;
+}
+.o-input-invalid .o-error-message{ opacity: 1;}
+.o-input-invalid label{ color: #b92f2f;}
